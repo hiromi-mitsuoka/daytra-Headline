@@ -1,5 +1,6 @@
 $blue: #3F51B5;
 $lightBlue: #7385E9;
+$deepBlue: #25379B;
 
 
 // mobile first
@@ -22,5 +23,108 @@ $breakpoints: (
 //map-get(マップ型変数, キー)で値を取得
   @media #{map-get($breakpoints, $breakpoint)} {
     @content;
+  }
+}
+
+.button{
+  .button-box{
+    margin: 100px 0;
+  }
+  a{
+    display: inline-block;
+    color: white;
+    padding: 16px;
+    width: 230px;
+    text-align: left;
+    background-color: $blue;
+    border-radius: 3px;
+    &:hover{
+      text-decoration: none;
+    }
+  }
+
+  .btn02{
+    position: relative;
+    i{
+      position: absolute;
+      display: inline-block;
+      // padding-left: 70px;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 20px;
+      font-size: 20px;
+    }
+  }
+
+  .btn03{
+    position: relative;
+    i{
+      position: absolute;
+      display: inline-block;
+      // padding-left: 70px;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 70px;
+      font-size: 20px;
+    }
+  }
+
+  .btn04{
+    padding-left: 38px;
+    box-shadow: 0 5px $deepBlue;
+  }
+
+  .btn05{
+    padding-left: 38px;
+    background: -webkit-linear-gradient(to bottom, $blue, #20295B);
+    background: linear-gradient(to bottom, $blue, #20295B);
+  }
+
+  .bg-light-black{
+    background-color: #333333;
+    padding: 27px 0;
+    .btn06{
+      background: none;
+      border: 3px solid white;
+      border-radius: 0;
+    }
+  }
+
+  .btn07{
+    position: relative;
+    background: none;
+    &:after{
+      content: "";
+      position: absolute;
+      width: 123px;
+      height: 123px;
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      background-color: $blue;
+      z-index: -1;
+    }
+  }
+
+  .btn08{
+    position: relative;
+    border-radius: 28px;
+    i{
+      position: absolute;
+      display: inline-block;
+      // padding-left: 70px;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 20px;
+      font-size: 20px;
+    }
+  }
+
+  .btn09{
+    padding-left: 38px;
+    box-shadow: 0 5px $deepBlue;
+    border-radius: 0;
   }
 }
